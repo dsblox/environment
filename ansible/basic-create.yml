@@ -1,0 +1,17 @@
+# Basic provisioning example
+- name: create AWS resources
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+  - name: create an EC2 instance
+    local_action:
+      module: ec2
+      key_name: "{{key_name}}"
+      region: "{{aws_region}}"
+      group_id: "{{security_group_id}}"
+      instance_type: "{{instance_type}}"
+      image: "{{ami_id}}"
+      vpc_subnet_id: "{{subnet_id}}"
+      wait: yes
+    register: basic_ec2

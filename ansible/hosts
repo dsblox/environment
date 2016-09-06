@@ -1,0 +1,5 @@
+[local]
+localhost ansible_connection=local
+
+[ec2]
+banana ansible_host=54.197.7.128 ansible_user=ec2-user

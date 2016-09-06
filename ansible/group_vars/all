@@ -1,0 +1,7 @@
+key_name: dblock-master
+aws_region: us-east-1
+ami_id: ami-6869aa05
+instance_type: t2.nano
+security_group_id: sg-1a40e460
+vpc_id: vpc-dc294fb9
+subnet_id: subnet-5916d872
